@@ -16,6 +16,9 @@ while True:
         discapacidad = int(input("Seleccione una opción: "))
     except ValueError:
         print("debe ingresar un numero para marcar su opcion, vuelva a intentarlo:")
+    
+        if discapacidad not in [1, 2]:
+            print("Opción inválida. Solo puede elegir 1 o 2.")
         continue    
 
 # Evaluar condiciones
