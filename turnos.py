@@ -4,12 +4,19 @@ contadorB = 0
 contadorC = 0
 while True:
     # Solicitar datos al cliente
-    edad = int(input("Ingrese su edad: "))
-
-    print("¿Tiene alguna discapacidad?")
+    try:
+        edad = int(input("Ingrese su edad: "))
+    except ValueError:
+        print("debe ingresar un numero, vuelva a intentarlo")
+        continue
+    print("¿Tiene alguna discapacidad?")  
     print("1. Sí")
     print("2. No")
-    discapacidad = int(input("Seleccione una opción: "))
+    try:    
+        discapacidad = int(input("Seleccione una opción: "))
+    except ValueError:
+        print("debe ingresar un numero para marcar su opcion, vuelva a intentarlo:")
+        continue    
 
 # Evaluar condiciones
     if discapacidad == 1:
