@@ -6,7 +6,7 @@ contadorC = 0
 while True:
     # Solicitar datos al cliente
     try:
-        edad = int(input("Ingrese su edad: "))
+        edad = int(input("Ingrese su edad: ").strip())
     except ValueError:
         print("Debe ingresar un numero, vuelva a intentarlo")
         continue
@@ -16,7 +16,7 @@ while True:
     print("2. No")
 
     try:
-        discapacidad = int(input("Seleccione una opción: "))
+        discapacidad = int(input("Seleccione una opción: ").strip())
     except ValueError:
         print("Debe ingresar un numero para marcar su opcion")
         continue
